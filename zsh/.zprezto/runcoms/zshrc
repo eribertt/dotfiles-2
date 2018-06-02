@@ -15,3 +15,5 @@ fi
 pxa() {
   ps auxww | ag "$*" --color | sed "/ag ........${*//\//\\/}/d;/sed/d;/ps auxww/d"
 }
+
+alias killdiscord="killall Discord; killall Discord"
