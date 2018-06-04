@@ -5,7 +5,7 @@ minus a few things that contain passwords!
 * How to setup
 This is pretty easy! all you need is [[https://www.gnu.org/software/stow/][Gnu Stow]].
 #+BEGIN_SRC shell
-git clone https://github.com/ar1a/dotfiles ~/dotfiles
+git clone --recursive https://github.com/ar1a/dotfiles ~/dotfiles
 cd ~/dotfiles
 stow emacs # or whatever you want to use!
 #+END_SRC
