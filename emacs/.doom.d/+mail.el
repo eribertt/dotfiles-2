@@ -501,5 +501,5 @@ with `notmuch-hello-query-counts'."
                                 "*offlineimap*"
                                 "offlineimap -o")
    '(lambda (process event)
-      (notmuch-refresh-all-buffers)))
-  (pop-to-buffer "*offlineimap*"))
+      (notmuch-refresh-all-buffers)
+      (message "Done!"))))
