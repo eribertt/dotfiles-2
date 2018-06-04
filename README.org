@@ -1,0 +1,24 @@
+#+TITLE: My Dotfiles
+* Welcome!
+Welcome to my dotfiles! This contains everything I use to config my computer,
+minus a few things that contain passwords!
+* How to setup
+This is pretty easy! all you need is [[https://www.gnu.org/software/stow/][Gnu Stow]].
+#+BEGIN_SRC shell
+git clone https://github.com/ar1a/dotfiles ~/dotfiles
+cd ~/dotfiles
+stow emacs # or whatever you want to use!
+#+END_SRC
+
+You can easily remove them by running
+#+BEGIN_SRC shell
+stow -D emacs
+#+END_SRC
+* Special setup
+** Emacs
+You will also need [[https://github.com/hlissner/doom-emacs/tree/develop][Doom emacs]].
+#+BEGIN_SRC shell
+git clone https://github.com/hlissner/doom-emacs ~/.emacs.d -b develojp
+cd ~/.emacs.d
+make quickstart
+#+END_SRC
