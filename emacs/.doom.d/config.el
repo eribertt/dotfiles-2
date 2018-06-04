@@ -8,15 +8,6 @@
 
 (add-hook 'prog-mode-hook #'goto-address-mode) ;; Linkify links!
 
-(evil-define-command evil-ask-to-save-and-quit ()
-  "Ask to save each modified buffer and exit Emacs."
-  (save-some-buffers nil nil)
-  (evil-quit))
-
-(map! :leader
-      :prefix "q"
-      :nv "q" #'evil-ask-to-save-and-quit)
-
 ;; Load snippets
 (after! yasnippet
   (push (expand-file-name "snippets/" doom-private-dir) yas-snippet-dirs))
