@@ -22,6 +22,11 @@ git clone https://github.com/hlissner/doom-emacs ~/.emacs.d -b develop
 cd ~/.emacs.d
 make quickstart
 #+END_SRC
+And also, make sure to install the fonts in dotfiles/emacs/.doom.d/fonts.tar.gz
+*** +mail
+For my mail setup i have my offlineimap running (config included in repo), and
+also have a .msmtprc in my home directory. You can see how to configure that [[https://wiki.archlinux.org/index.php/Msmtp][Here]]
+
 ** Offlineimap
 You will need to create a python file called ~decrypt.py~ with a function
 mailpasswd() that returns the password
