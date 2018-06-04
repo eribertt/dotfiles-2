@@ -1,6 +1,6 @@
 ;;;  -*- lexical-binding: t; -*-
 
-;;; Config is mostly from https://kkatsuyuki.github.io/notmuch-conf/
+;;; Config is mostly from https://kkatsuyuki.github.io/notmuch-conf/                 aadsa
 ;;; This is all modified from
 ;;; https://github.com/fuxialexander/doom-emacs-private-xfu/
 
@@ -190,7 +190,7 @@
 (defun +mail/buffer-face-mode-notmuch-show ()
   "Sets a fixed width (monospace) font in current buffer"
   (interactive)
-  (setq buffer-face-mode-face '(:family "Charter" :height 1.2))
+  (setq buffer-face-mode-face '(:family "Iosevka" :height 1.2))
   (buffer-face-mode)
   (setq-local line-spacing 0.5))
 
