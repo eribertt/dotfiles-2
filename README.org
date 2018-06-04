@@ -22,3 +22,6 @@ git clone https://github.com/hlissner/doom-emacs ~/.emacs.d -b develop
 cd ~/.emacs.d
 make quickstart
 #+END_SRC
+** Offlineimap
+You will need to create a python file called ~decrypt.py~ with a function
+mailpasswd() that returns the password

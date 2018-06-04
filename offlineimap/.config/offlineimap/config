@@ -1,0 +1,27 @@
+# Sample minimal config file.  Copy this to ~/.offlineimaprc and edit to
+# get started fast.
+
+[general]
+accounts = Aria
+pythonfile = ~/.config/offlineimap/decrypt.py
+maxsyncaccounts = 1
+
+[Account Aria]
+localrepository = Aria-Local
+remoterepository = Aria-Remote
+synclabels = yes
+postsynchook = ~/.config/offlineimap/postsync.sh
+
+[Repository Aria-Local]
+type = GmailMaildir
+localfolders = ~/mail/Aria
+
+[Repository Aria-Remote]
+type = Gmail
+remoteuser = aria@ar1as.space
+remotepasseval = mailpasswd()
+
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+folderfilter = lambda foldername: foldername in ['[Gmail]/All Mail']
+nametrans = lambda foldername: re.sub('^\[Gmail\]/All Mail$', 'all',foldername)
