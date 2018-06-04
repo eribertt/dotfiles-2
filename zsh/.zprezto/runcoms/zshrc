@@ -22,3 +22,5 @@ alias killdiscord="killall Discord; killall Discord"
 r() {
     tr -dc 0-9A-Za-z < /dev/urandom | dd status=none bs=1 count=${1:-13} | tee >(pbcopy) && echo
 }
+
+alias cp="nocorrect cp --reflink"
