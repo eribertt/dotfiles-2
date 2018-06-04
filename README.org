@@ -18,7 +18,7 @@ stow -D emacs
 ** Emacs
 You will also need [[https://github.com/hlissner/doom-emacs/tree/develop][Doom emacs]].
 #+BEGIN_SRC shell
-git clone https://github.com/hlissner/doom-emacs ~/.emacs.d -b develojp
+git clone https://github.com/hlissner/doom-emacs ~/.emacs.d -b develop
 cd ~/.emacs.d
 make quickstart
 #+END_SRC
