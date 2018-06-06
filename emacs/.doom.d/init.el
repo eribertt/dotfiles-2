@@ -14,6 +14,9 @@
        eval              ; run code, run (also, repls)
        (evil +everywhere); come to the dark side, we have cookies
        file-templates    ; auto-snippets for empty files
+       (lookup           ; helps you navigate your code and documentation
+        +devdocs)         ; ...on devdocs.io online
+       ;; +docsets)        ; ...or in Dash docsets locally
        snippets          ; my elves. They type so I don't have to
        spellcheck        ; tasing you for misspelling mispelling
        syntax-checker ;;+childframe)    ; tasing you for every semicolon you forget
@@ -37,10 +40,6 @@
                                         ;ido               ; the other *other* search engine...
        ;;ivy ;;+childframe)               ; a search engine for love and life
 
-       :feature
-       (lookup           ; helps you navigate your code and documentation
-        +devdocs)         ; ...on devdocs.io online
-       ;; +docsets)        ; ...or in Dash docsets locally
        :ui
        doom              ; what makes DOOM look the way it does
                                         ;doom-dashboard    ; a nifty splash screen for Emacs
