@@ -32,7 +32,7 @@ font pango:Iosevka 11
 floating_modifier $mod
 
 exec --no-startup-id betterlockscreen -w
-bindsym $mod+shift+x exec betterlockscreen -l dimblur
+bindsym $mod+shift+x exec --no-startup-id betterlockscreen -l dimblur
 # binds
 bindsym $mod+Return exec --no-startup-id xterm
 bindsym $mod+a exec --no-startup-id zsh -c emacs
