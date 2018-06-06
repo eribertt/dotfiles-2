@@ -12,6 +12,8 @@
 ;; A nice alternative (although brighter) could be: nova - https://trevordmiller.com/projects/nova
 (setq doom-theme 'doom-tomorrow-night)
 
+(setq +doom-modeline-buffer-file-name-style 'relative-from-project)
+
 ;; Thanks to bitwalker for this
 (after! neotree
   ;; When switching to a file in the current project, expand the directory
