@@ -51,6 +51,8 @@ padding-right = 2
 module-margin-right = 0
 module-margin-left = 0
 
+tray-position = left
+
 ;amodules-right = updates date menu0
 ;modules-center = mpd
 ;modules-left = cpu memory filesystem
