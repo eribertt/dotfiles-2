@@ -14,10 +14,12 @@ There are 2 possible values:
 (def-package! treemacs
   :commands (treemacs treemacs-find-file treemacs-bookmark)
   :config
-  ;; FIXME this stuff isn't being called what the fuck
   (setq treemacs-icon-open-png   (propertize "⊖ " 'face 'treemacs-directory-face)
-        treemacs-icon-closed-png (propertize "⊕ " 'face 'treemacs-directory-face))
-  (setq treemacs-follow-after-init t
+        treemacs-icon-closed-png (propertize "⊕ " 'face 'treemacs-directory-face)
+        treemacs-icon-tag-node-open-png   (propertize "− " 'face 'font-lock-keyword-face)
+        treemacs-icon-tag-node-closed-png (propertize "+ " 'face 'font-lock-keyword-face)
+        treemacs-icon-tag-leaf-png        (propertize "🞄 " 'face 'font-lock-keyword-face)
+        treemacs-follow-after-init t
         treemacs-width 35
         treemacs-position 'left
         treemacs-is-never-other-window t
@@ -29,15 +31,18 @@ There are 2 possible values:
         treemacs-collapse-dirs (if (executable-find "python3") 3 0))
   (treemacs-follow-mode t)
   (treemacs-filewatch-mode t)
-  (when (memq treemacs-use-git-mode '(simple extended)))
-  (treemacs-git-mode treemacs-use-git-mode))
+  (when (memq treemacs-use-git-mode '(simple extended))
+    (treemacs-git-mode treemacs-use-git-mode))
+  (add-hook 'treemacs-mode-hook #'evil-normalize-keymaps)
+  (after! evil-escape
+    (push 'treemacs-mode evil-escape-excluded-major-modes)))
 
-;; FIXME this isn't being bound
-(map! :leader
-      :prefix "f"
-      :desc "Open treemacs" :nv "t" #'treemacs
-      :desc "Find file in treemacs" :nv "T" #'treemacs-find-file
-      :desc "Bookmark" :nv "b" #'treemacs-bookmark)
+(add-hook! 'doom-post-init-hook
+  (map! :leader
+        :prefix "f"
+        :desc "Open treemacs" :nv "t" #'treemacs
+        :desc "Find file in treemacs" :nv "T" #'treemacs-find-file
+        :desc "Go to bookmark" :nv "b" #'treemacs-bookmark))
 
 (def-package! treemacs-evil
   :after (treemacs evil))
