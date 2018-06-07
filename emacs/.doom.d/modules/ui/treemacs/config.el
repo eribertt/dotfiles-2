@@ -41,7 +41,8 @@ There are 2 possible values:
         :desc "Go to bookmark" :nv "b" #'treemacs-bookmark))
 
 (def-package! treemacs-evil
-  :after (treemacs evil))
+  :after (treemacs evil)
+  :if (featurep! :feature evil))
 
 (def-package! treemacs-projectile
   :after (treemacs projectile))
