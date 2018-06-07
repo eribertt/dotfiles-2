@@ -40,7 +40,7 @@ There are 2 possible values:
       :desc "Bookmark" :nv "b" #'treemacs-bookmark)
 
 (def-package! treemacs-evil
-  :after treemacs evil)
+  :after (treemacs evil))
 
 (def-package! treemacs-projectile
-  :after treemacs projectile)
+  :after (treemacs projectile))
