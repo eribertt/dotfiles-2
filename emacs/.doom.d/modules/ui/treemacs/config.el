@@ -14,11 +14,7 @@ There are 2 possible values:
 (def-package! treemacs
   :commands (treemacs treemacs-find-file treemacs-bookmark)
   :config
-  (setq treemacs-icon-open-png   (propertize "⊖ " 'face 'treemacs-directory-face)
-        treemacs-icon-closed-png (propertize "⊕ " 'face 'treemacs-directory-face)
-        treemacs-icon-tag-node-open-png   (propertize "− " 'face 'font-lock-keyword-face)
-        treemacs-icon-tag-node-closed-png (propertize "+ " 'face 'font-lock-keyword-face)
-        treemacs-icon-tag-leaf-png        (propertize "🞄 " 'face 'font-lock-keyword-face)
+  (setq treemacs-no-png-images t
         treemacs-follow-after-init t
         treemacs-width 35
         treemacs-position 'left
