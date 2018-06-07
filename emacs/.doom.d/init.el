@@ -55,7 +55,8 @@
        (popup            ; tame sudden yet inevitable temporary windows
         +all             ; catch all popups that start with an asterix
         +defaults)       ; default popup rules
-       neotree           ; a project drawer, like NERDTree for vim
+       ;neotree           ; a project drawer, like NERDTree for vim
+       treemacs
 
        :tools
        gist              ; interacting with github gists
