@@ -1,7 +1,8 @@
 ;;;  -*- lexical-binding: t; -*-
 (require 'prettier-js)
 
-(setq-default evil-shift-width 2) ;; I normally use 2wide for my projects.
+(setq-default evil-shift-width 2 ;; I normally use 2wide for my projects.
+              tab-width 2)
 
 (setq user-mail-address "aria@ar1as.space"
       user-full-name "Aria Edm")
