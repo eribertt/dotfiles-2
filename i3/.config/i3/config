@@ -178,4 +178,6 @@ exec --no-startup-id compton -f &
 gaps inner 10 gaps outer 15
 for_window [class="^.*"] border pixel 1
 
+assign [class="discord"] $ws3
+
 exec --no-startup-id xrdb ~/.Xresources
