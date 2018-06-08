@@ -29,9 +29,7 @@ There are 2 possible values:
   (treemacs-filewatch-mode t)
   (when (memq treemacs-use-git-mode '(simple extended))
     (treemacs-git-mode treemacs-use-git-mode))
-  (add-hook 'treemacs-mode-hook #'evil-normalize-keymaps)
-  (after! evil-escape
-    (push 'treemacs-mode evil-escape-excluded-major-modes)))
+  (add-hook 'treemacs-mode-hook #'evil-normalize-keymaps))
 
 (add-hook! 'doom-post-init-hook
   (map! :leader
