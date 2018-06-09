@@ -14,15 +14,16 @@
               scheme-mode
               lisp-mode)
     #'+disable-yas)
-  :config
   (setq parinfer-extensions
         '(defaults
            evil
            pretty-parens
            smart-tab
-           smart-yank)
-        parinfer-auto-switch-indent-mode t
-        parinfer-auto-switch-indent-mode-when-closing t)
+           smart-yank))
+  :config
+  (map! :map emacs-lisp-mode-map
+        :i "<tab>" #'parinfer-smart-tab:dwim-right
+        :i "<backtab>" #'parinfer-smart-tab:dwim-left)
   ;; FIXME Parinfer isn't being mapped
   (map! :map parinfer-mode-map
         :localleader
