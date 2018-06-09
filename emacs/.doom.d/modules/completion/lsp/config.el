@@ -28,12 +28,33 @@
                                                           :foreground nil t))
   (set-face-attribute 'lsp-ui-peek-header nil
                       :background (face-attribute 'highlight :background nil t)
-                      :foreground (face-attribute 'default :foreground nil t))
-  (setq lsp-ui-doc-enable nil)) ;; This is so intrusive
+                      :foreground (face-attribute 'default :foreground nil t)))
+
+(def-package! lsp-javascript-typescript
+  :commands (lsp-javascript-typescript-enable)
+  :config
+  (defun my-company-transformer (candidates)
+    (let ((completion-ignore-case t))
+      (all-completions (company-grab-symbol) candidates)))
+
+  (add-hook! 'js2-mode-hook
+    (make-local-variable 'company-transformers)
+    (push 'my-company-transformer company-transformers)))
+
+(add-hook! js2-mode #'lsp-javascript-typescript-enable)
+(add-hook! typescript-mode #'lsp-javascript-typescript-enable)
+
+(def-package! company-lsp
+  :after lsp-mode
+  :config
+  (push 'company-lsp company-backends))
+
+
+
 
 (when (featurep! +sh)
   (lsp-define-stdio-client lsp-sh
-                          "sh"
-                          #'(lambda () default-directory)
-                          '("bash-language-server" "start"))
+                           "sh"
+                           #'(lambda () default-directory)
+                           '("bash-language-server" "start"))
   (add-hook 'sh-mode-hook #'lsp-sh-enable))
