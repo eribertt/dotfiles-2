@@ -40,6 +40,7 @@
        hl-todo
        nav-flash
        ;tabbar
+       fci
 
        vi-tilde-fringe
        window-select
@@ -62,6 +63,7 @@
        tmux
        upload
        editorconfig
+       wakatime
 
        :lang
        assembly
