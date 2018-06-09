@@ -30,6 +30,7 @@
        (helm +fuzzy) ;+childframe)
        ;ido
        ;; (ivy) ;;+childframe)
+       (lsp +sh)
 
        :ui
        doom
