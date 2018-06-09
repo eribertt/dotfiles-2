@@ -55,6 +55,17 @@
   :init
   (add-hook! go-mode #'lsp-go-enable))
 
+(when (featurep! +python)
+  (after! python
+    (lsp-define-stdio-client lsp-python "python"
+                             (lsp-make-traverser #'(lambda (dir)
+                                                     (directory-files
+                                                      dir
+                                                      nil
+                                                      "\\.git")))
+                             '("pyls"))
+    (add-hook! python-mode #'lsp-python-enable)))
+
 
 
 

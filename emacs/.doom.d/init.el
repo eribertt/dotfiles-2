@@ -125,7 +125,8 @@
        :completion
        (lsp
         +javascript
-        +go)
+        +go
+        +python)
 
        :config
        ;; The default module set reasonable defaults for Emacs. It also provides
