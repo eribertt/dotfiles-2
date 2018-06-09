@@ -1,6 +1,4 @@
 ;;;  -*- lexical-binding: t; -*-
-(require 'rainbow-delimiters) ;; gotta require it because the function
-;; it calls isn't autoloaded
 
 (def-package! parinfer
   :commands (parinfer-mode)
