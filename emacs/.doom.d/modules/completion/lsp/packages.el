@@ -9,3 +9,5 @@
   (package! lsp-javascript-typescript)
   (package! tide :disable t))
 
+(when (featurep! +go)
+  (package! lsp-go))

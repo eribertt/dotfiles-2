@@ -49,6 +49,12 @@
   :config
   (push 'company-lsp company-backends))
 
+(def-package! lsp-go
+  :when (featurep! +go)
+  :commands (lsp-go-enable)
+  :init
+  (add-hook! go-mode #'lsp-go-enable))
+
 
 
 
