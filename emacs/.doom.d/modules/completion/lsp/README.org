@@ -1,0 +1,22 @@
+#+TITLE: :completion lsp
+
+Adds language-server-protocol to doom.
+
+
+* Table of Contents :TOC:
+- [[Prerequisites][Prerequisites]]
+  - [[Javascript][Javascript]]
+  - [[Sh][Sh]]
+
+* Prerequisites
+
+** Javascript
+#+BEGIN_SRC sh
+npm i -g javascript-typescript-langserver
+#+END_SRC
+
+
+** Sh
+#+BEGIN_SRC sh
+npm i -g bash-language-server
+#+END_SRC
