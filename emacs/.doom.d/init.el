@@ -27,7 +27,7 @@
         +auto)
 
        ;the ultimate code completion backend
-       (helm +fuzzy +childframe)
+       (helm +fuzzy) ;+childframe)
        ;ido
        ;; (ivy) ;;+childframe)
 
