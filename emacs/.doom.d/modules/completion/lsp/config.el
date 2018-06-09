@@ -31,8 +31,9 @@
                       :foreground (face-attribute 'default :foreground nil t))
   (setq lsp-ui-doc-enable nil)) ;; This is so intrusive
 
-(lsp-define-stdio-client lsp-sh
-                         "sh"
-                         #'(lambda () default-directory)
-                         '("bash-language-server" "start"))
-(add-hook 'sh-mode-hook #'lsp-sh-enable)
+(when (featurep! +sh)
+  (lsp-define-stdio-client lsp-sh
+                          "sh"
+                          #'(lambda () default-directory)
+                          '("bash-language-server" "start"))
+  (add-hook 'sh-mode-hook #'lsp-sh-enable))
