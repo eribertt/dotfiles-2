@@ -125,6 +125,7 @@
        :completion
        (lsp
         +javascript
+        +sh
         +go
         +python)
 
