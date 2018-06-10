@@ -31,6 +31,14 @@
     (make-local-variable 'company-transformers)
     (push 'my-company-transformer company-transformers)))
 
+(def-package! lsp-typescript
+  :commands (lsp-typescript-enable)
+  :init
+  (after! js2-mode
+    (add-hook 'js2-mode-hook #'lsp-typescript-enable))
+  (after! typescript-mode
+    (add-hook 'typescript-mode-hook #'lsp-typescript-enable)))
+
 
 (def-package! company-lsp
   :after lsp-mode
