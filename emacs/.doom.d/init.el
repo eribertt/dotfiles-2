@@ -126,8 +126,8 @@
        (lsp
         +javascript
         +sh
-        +go
-        +python)
+        +python
+        +rust)
 
        :config
        ;; The default module set reasonable defaults for Emacs. It also provides

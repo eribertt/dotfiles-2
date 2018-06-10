@@ -18,3 +18,7 @@
 
 (when (featurep! +python)
   (package! anaconda-mode :disable t))
+
+(when (featurep! +rust)
+  (package! lsp-rust)
+  (package! racer :disable t))

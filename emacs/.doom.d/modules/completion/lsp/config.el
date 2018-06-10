@@ -52,6 +52,14 @@
   :init
   (add-hook! go-mode #'lsp-go-enable))
 
+(def-package! lsp-rust
+  :when (featurep! +rust)
+  :commands (lsp-rust-enable)
+  :init
+  (setq lsp-rust-rls-command '("rustup" "run" "nightly" "rls"))
+  (after! rust-mode
+    (add-hook 'rust-mode-hook #'lsp-rust-enable)))
+
 (when (featurep! +python)
   (after! python
     (lsp-define-stdio-client lsp-python "python"
