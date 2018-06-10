@@ -63,21 +63,15 @@
 (when (featurep! +python)
   (after! python
     (lsp-define-stdio-client lsp-python "python"
-                             (lsp-make-traverser #'(lambda (dir)
-                                                     (directory-files
-                                                      dir
-                                                      nil
-                                                      "requirements\\.txt")))
+                             #'projectile-project-root
                              '("pyls"))
     (add-hook! python-mode #'lsp-python-enable)))
-
-
 
 (when (featurep! +sh)
   (after! sh-script
     (lsp-define-stdio-client lsp-sh
                             "sh"
-                            #'(lambda () default-directory)
+                            #'projectile-project-root
                             '("bash-language-server" "start"))
     (add-hook 'sh-mode-hook #'lsp-sh-enable)))
 
