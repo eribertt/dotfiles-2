@@ -52,6 +52,16 @@
   :init
   (add-hook! go-mode #'lsp-go-enable))
 
+(def-package! lsp-css
+  :when (featurep! +css)
+  :commands (lsp-css-enable)
+  :init
+  (add-hook! (css-mode
+              less-mode
+              ;; sass-mode ; rip :(
+              scss-mode)
+    #'lsp-css-enable))
+
 (def-package! lsp-rust
   :when (featurep! +rust)
   :commands (lsp-rust-enable)

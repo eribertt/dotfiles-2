@@ -8,9 +8,10 @@
 (when (featurep! +javascript)
   ;; (package! lsp-javascript-typescript)
   (package! lsp-typescript
-    :recipe (:fetcher github
-                      :repo "emacs-lsp/lsp-javascript"
-                      :files ("lsp-typescript.el")))
+    :recipe (:fetcher
+             github
+             :repo "emacs-lsp/lsp-javascript"
+             :files ("lsp-typescript.el")))
   (package! tide :disable t))
 
 (when (featurep! +go)
@@ -22,3 +23,10 @@
 (when (featurep! +rust)
   (package! lsp-rust)
   (package! racer :disable t))
+
+(when (featurep! +css)
+  (package! lsp-css
+    :recipe (:fetcher
+             github
+             :repo "ar1a/lsp-css")))
+

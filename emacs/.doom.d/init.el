@@ -127,7 +127,8 @@
         +javascript
         +sh
         +python
-        +rust)
+        +rust
+        +css)
 
        :config
        ;; The default module set reasonable defaults for Emacs. It also provides
