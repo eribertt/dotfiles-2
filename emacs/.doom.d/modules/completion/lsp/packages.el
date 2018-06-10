@@ -11,3 +11,6 @@
 
 (when (featurep! +go)
   (package! lsp-go))
+
+(when (featurep! +python)
+  (package! anaconda-mode :disable t))

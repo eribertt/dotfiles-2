@@ -47,7 +47,7 @@
                                                      (directory-files
                                                       dir
                                                       nil
-                                                      "\\.git")))
+                                                      "requirements\\.txt")))
                              '("pyls"))
     (add-hook! python-mode #'lsp-python-enable)))
 
