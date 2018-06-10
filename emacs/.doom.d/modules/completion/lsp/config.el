@@ -17,6 +17,10 @@
 
 (def-package! lsp-javascript-typescript
   :commands (lsp-javascript-typescript-enable)
+  :init
+  (add-hook! (typescript-mode
+              js2-mode)
+    #'lsp-javascript-typescript-enable)
   :config
   (defun my-company-transformer (candidates)
     (let ((completion-ignore-case t))
@@ -26,8 +30,6 @@
     (make-local-variable 'company-transformers)
     (push 'my-company-transformer company-transformers)))
 
-(add-hook! js2-mode #'lsp-javascript-typescript-enable)
-(add-hook! typescript-mode #'lsp-javascript-typescript-enable)
 
 (def-package! company-lsp
   :after lsp-mode
