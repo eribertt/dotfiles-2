@@ -54,11 +54,12 @@
 
 
 (when (featurep! +sh)
-  (lsp-define-stdio-client lsp-sh
-                           "sh"
-                           #'(lambda () default-directory)
-                           '("bash-language-server" "start"))
-  (add-hook 'sh-mode-hook #'lsp-sh-enable))
+  (after! sh-script
+    (lsp-define-stdio-client lsp-sh
+                            "sh"
+                            #'(lambda () default-directory)
+                            '("bash-language-server" "start"))
+    (add-hook 'sh-mode-hook #'lsp-sh-enable)))
 
 (defun +peek-set-face-theme ()
   ;; Stolen from https://github.com/syl20bnr/spacemacs/blob/develop/layers/%2Btools/lsp/funcs.el#L12
