@@ -12,7 +12,8 @@
     :references #'lsp-ui-peek-find-references)
   (+peek-set-face-theme)
   (setq lsp-ui-doc-max-height 8
-        lsp-ui-doc-max-width 35))
+        lsp-ui-doc-max-width 35
+        lsp-ui-sideline-ignore-duplicate t))
         ;; lsp-ui-doc-position 'at-point))
 
 (def-package! lsp-javascript-typescript
