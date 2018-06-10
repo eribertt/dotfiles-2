@@ -35,7 +35,8 @@
 (def-package! company-lsp
   :after lsp-mode
   :config
-  (push 'company-lsp company-backends))
+  (set! :company-backend 'lsp-mode '(company-lsp))
+  (setq company-lsp-enable-recompletion t))
 
 (def-package! lsp-go
   :when (featurep! +go)
