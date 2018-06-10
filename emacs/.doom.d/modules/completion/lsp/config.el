@@ -10,7 +10,10 @@
   (set! :lookup 'lsp-ui-mode
     :definition #'lsp-ui-peek-find-definitions
     :references #'lsp-ui-peek-find-references)
-  (+peek-set-face-theme))
+  (+peek-set-face-theme)
+  (setq lsp-ui-doc-max-height 8
+        lsp-ui-doc-max-width 35))
+        ;; lsp-ui-doc-position 'at-point))
 
 (def-package! lsp-javascript-typescript
   :commands (lsp-javascript-typescript-enable)
