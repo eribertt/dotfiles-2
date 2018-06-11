@@ -39,7 +39,7 @@
        evil-goggles
        hl-todo
        nav-flash
-       ;tabbar
+                                        ;tabbar
 
        vi-tilde-fringe
        window-select
@@ -66,7 +66,7 @@
 
        :lang
        assembly
-       (cc +irony)
+       cc
        crystal
        clojure
        csharp
@@ -128,7 +128,8 @@
         +sh
         +python
         +rust
-        +css)
+        +css
+        +cpp)
 
        :config
        ;; The default module set reasonable defaults for Emacs. It also provides

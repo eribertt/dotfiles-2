@@ -69,6 +69,25 @@
   (after! rust-mode
     (add-hook 'rust-mode-hook #'lsp-rust-enable)))
 
+(def-package! cquery
+  :when (featurep! +cpp)
+  :commands (lsp-cquery-enable)
+  :init
+  (setq cquery-extra-init-params '(:index (:comments 2)
+                                          :cacheFormat "msgpack"
+                                          :completion (:detailedLabel t)))
+  (defun +setup-cquery ()
+    (condition-case nil
+        (lsp-cquery-enable)
+      (user-error nil)))
+  (add-hook 'c-mode-common-hook #'+setup-cquery))
+  ;; (add-hook! '(c++-mode-hook c-mode-hook)
+  ;;   #'(lambda ()
+  ;;       (lsp-cquery-enable)
+  ;;       (setq-local company-transformers nil
+  ;;                   company-lsp-cache-candidates nil))))
+
+
 (when (featurep! +python)
   (after! python
     (lsp-define-stdio-client lsp-python "python"

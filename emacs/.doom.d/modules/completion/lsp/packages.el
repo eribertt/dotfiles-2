@@ -30,3 +30,6 @@
              github
              :repo "emacs-lsp/lsp-css")))
 
+(when (featurep! +cpp)
+  (package! cquery))
+
