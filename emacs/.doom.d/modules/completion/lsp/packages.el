@@ -34,3 +34,6 @@
   (package! cquery)
   (package! rtags :disable t))
 
+
+(when (featurep! +ocaml)
+  (package! lsp-ocaml))

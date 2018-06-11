@@ -129,7 +129,8 @@
         +python
         +rust
         +css
-        +cpp)
+        +cpp
+        +ocaml)
 
        :config
        ;; The default module set reasonable defaults for Emacs. It also provides

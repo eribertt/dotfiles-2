@@ -85,6 +85,14 @@
       (user-error nil)))
   (add-hook! 'c-mode-common-hook #'+setup-cquery))
 
+(def-package! lsp-ocaml
+  :when (featurep! +ocaml)
+  :commands (lsp-ocaml-enable)
+  :init
+  (add-hook! '(tuareg-mode-hook
+               reason-mode-hook)
+    #'lsp-ocaml-enable))
+
 
 (when (featurep! +python)
   (after! python
