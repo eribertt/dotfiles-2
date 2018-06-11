@@ -40,7 +40,6 @@
        hl-todo
        nav-flash
        ;tabbar
-       fci
 
        vi-tilde-fringe
        window-select
