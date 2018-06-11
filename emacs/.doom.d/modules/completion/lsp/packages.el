@@ -28,5 +28,5 @@
   (package! lsp-css
     :recipe (:fetcher
              github
-             :repo "ar1a/lsp-css")))
+             :repo "emacs-lsp/lsp-css")))
 
