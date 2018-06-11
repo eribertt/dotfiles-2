@@ -120,7 +120,7 @@
         +langtool)
 
        :editor
-       parinfer
+       lispyville
 
        :completion
        (lsp
