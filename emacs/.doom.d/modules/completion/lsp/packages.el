@@ -31,5 +31,6 @@
              :repo "emacs-lsp/lsp-css")))
 
 (when (featurep! +cpp)
-  (package! cquery))
+  (package! cquery)
+  (package! rtags :disable t))
 

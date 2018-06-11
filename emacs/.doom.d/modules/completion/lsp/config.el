@@ -75,7 +75,8 @@
   :init
   (setq cquery-extra-init-params '(:index (:comments 2)
                                           :cacheFormat "msgpack"
-                                          :completion (:detailedLabel t)))
+                                          :completion (:detailedLabel t))
+        cquery-sem-highlight-method 'overlay) ;; set to 'font-lock if highlighting slowly
   (defun +setup-cquery ()
     (condition-case nil
         (lsp-cquery-enable)
