@@ -78,15 +78,12 @@
                                           :completion (:detailedLabel t))
         cquery-sem-highlight-method 'overlay) ;; set to 'font-lock if highlighting slowly
   (defun +setup-cquery ()
+    (setq-local company-transformers nil)
+    (setq company-lsp-cache-candidates nil)
     (condition-case nil
         (lsp-cquery-enable)
       (user-error nil)))
-  (add-hook 'c-mode-common-hook #'+setup-cquery))
-  ;; (add-hook! '(c++-mode-hook c-mode-hook)
-  ;;   #'(lambda ()
-  ;;       (lsp-cquery-enable)
-  ;;       (setq-local company-transformers nil
-  ;;                   company-lsp-cache-candidates nil))))
+  (add-hook! 'c-mode-common-hook #'+setup-cquery))
 
 
 (when (featurep! +python)
