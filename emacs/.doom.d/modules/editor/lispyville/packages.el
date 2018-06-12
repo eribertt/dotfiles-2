@@ -2,4 +2,5 @@
 ;;; editor/lispyville/packages.el
 
 (when (package! lispy)
-  (package! lispyville))
+  (when (featurep! :feature evil)
+    (package! lispyville)))

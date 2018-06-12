@@ -5,8 +5,19 @@
   :init
   (add-hook 'emacs-lisp-mode-hook #'lispy-mode))
 
-;; TODO: set key themes https://github.com/noctuid/lispyville
 (def-package!
   lispyville
   :after lispy
-  :config (add-hook 'lispy-mode-hook #'lispyville-mode))
+  :when (featurep! :feature evil)
+  :init
+  (setq lispyville-key-theme
+        '(operators
+          c-w
+          prettify
+          text-objects
+          additional-motions
+          wrap
+          mark-toggle))
+  :config
+  (push 'emacs-lisp-mode evil-escape-excluded-major-modes)
+  (add-hook 'lispy-mode-hook #'lispyville-mode))
