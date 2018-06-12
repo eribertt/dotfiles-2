@@ -15,20 +15,19 @@
         lsp-ui-sideline-ignore-duplicate t))
         ;; lsp-ui-doc-position 'at-point))
 
-(def-package! lsp-javascript-typescript
-  :commands (lsp-javascript-typescript-enable)
-  :init
-  (add-hook! (typescript-mode
-              js2-mode)
-    #'lsp-javascript-typescript-enable)
-  :config
-  (defun my-company-transformer (candidates)
-    (let ((completion-ignore-case t))
-      (all-completions (company-grab-symbol) candidates)))
-
-  (add-hook! 'js2-mode-hook
-    (make-local-variable 'company-transformers)
-    (push 'my-company-transformer company-transformers)))
+;; (def-package! lsp-javascript-typescript
+;;   :commands (lsp-javascript-typescript-enable)
+;;   :init
+;;   (add-hook! (typescript-mode
+;;               js2-mode)
+;;     #'lsp-javascript-typescript-enable)
+;;   :config
+;;   (defun my-company-transformer (candidates)
+;;     (let ((completion-ignore-case t))
+;;       (all-completions (company-grab-symbol) candidates)))
+;;   (add-hook! 'js2-mode-hook
+;;     (make-local-variable 'company-transformers)
+;;     (push 'my-company-transformer company-transformers)))
 
 (def-package! lsp-typescript
   :commands (lsp-typescript-enable)
