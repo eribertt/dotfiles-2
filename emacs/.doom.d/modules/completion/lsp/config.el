@@ -82,7 +82,7 @@
     (condition-case nil
         (lsp-cquery-enable)
       (user-error nil)))
-  (add-hook! 'c-mode-common-hook #'+setup-cquery))
+  (add-hook! (c-mode c++-mode objc-mode) #'+setup-cquery))
 
 (def-package! lsp-ocaml
   :when (featurep! +ocaml)
@@ -91,6 +91,12 @@
   (add-hook! '(tuareg-mode-hook
                reason-mode-hook)
     #'lsp-ocaml-enable))
+
+(def-package! lsp-intellij
+  :when (featurep! +java)
+  :commands (lsp-intellij-enable)
+  :init
+  (add-hook 'java-mode-hook #'lsp-intellij-enable))
 
 
 (when (featurep! +python)

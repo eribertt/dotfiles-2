@@ -130,7 +130,8 @@
         +rust
         +css
         +cpp
-        +ocaml)
+        +ocaml
+        +java)
 
        :config
        ;; The default module set reasonable defaults for Emacs. It also provides
