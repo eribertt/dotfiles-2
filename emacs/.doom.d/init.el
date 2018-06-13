@@ -26,9 +26,9 @@
        (company
         +auto)
 
-       ;the ultimate code completion backend
-       (helm +fuzzy) ;+childframe)
-       ;ido
+                                        ;the ultimate code completion backend
+       (helm +fuzzy)                    ;+childframe)
+                                        ;ido
        ;; (ivy) ;;+childframe)
 
        :ui
@@ -53,7 +53,7 @@
        gist
        ;macos
        make
-       magit             ;
+       magit                            ;
        password-store
        pdf
        prodigy

@@ -7,11 +7,13 @@
 ;; Dash highlighting
 (after! dash (dash-enable-font-lock))
 
+;; Show evil-motion before the word instead of over it
+(setq avy-style 'pre)
+
 ;; Change theme.
 ;; Nord is pretty cool: https://github.com/arcticicestudio/nord
 ;; A nice alternative (although brighter) could be: nova - https://trevordmiller.com/projects/nova
-;; (setq doom-theme 'doom-tomorrow-night)
-
+(setq doom-theme 'doom-nord)
 (setq +doom-modeline-buffer-file-name-style 'relative-from-project)
 
 ;; Thanks to bitwalker for this
