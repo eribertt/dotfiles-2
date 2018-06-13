@@ -27,7 +27,7 @@
         +auto)
 
                                         ;the ultimate code completion backend
-       (helm +fuzzy) ;+childframe)
+       (helm +fuzzy)                    ;+childframe)
                                         ;ido
        ;; (ivy) ;;+childframe)
 
@@ -53,7 +53,7 @@
        gist
                                         ;macos
        make
-       magit             ;
+       magit                            ;
        password-store
        pdf
        prodigy
