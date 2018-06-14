@@ -14,13 +14,8 @@
         lsp-ui-sideline-ignore-duplicate t))
 
 (def-package! lsp-typescript
-  :commands (lsp-typescript-enable)
-  :init
-  (after! js2-mode
-    (add-hook 'js2-mode-hook #'lsp-typescript-enable))
-  (after! typescript-mode
-    (add-hook 'typescript-mode-hook #'lsp-typescript-enable)))
-
+  :when (featurep! +javascript)
+  :hook ((js2-mode typescript-mode) . lsp-typescript-enable))
 
 (def-package! company-lsp
   :after lsp-mode
@@ -30,31 +25,21 @@
 
 (def-package! lsp-go
   :when (featurep! +go)
-  :commands (lsp-go-enable)
-  :init
-  (add-hook! go-mode #'lsp-go-enable))
+  :hook (go-mode . lsp-go-enable))
 
 (def-package! lsp-css
   :when (featurep! +css)
-  :commands (lsp-css-enable)
-  :init
-  (add-hook! (css-mode
-              less-mode
-              ;; sass-mode ; rip :(
-              scss-mode)
-    #'lsp-css-enable))
+  :hook ((css-mode less-mode scss-mode) . lsp-css-enable))
 
 (def-package! lsp-rust
   :when (featurep! +rust)
-  :commands (lsp-rust-enable)
+  :hook (rust-mode . lsp-rust-enable)
   :init
-  (setq lsp-rust-rls-command '("rustup" "run" "nightly" "rls"))
-  (after! rust-mode
-    (add-hook 'rust-mode-hook #'lsp-rust-enable)))
+  (setq lsp-rust-rls-command '("rustup" "run" "nightly" "rls")))
 
 (def-package! cquery
   :when (featurep! +cpp)
-  :commands (lsp-cquery-enable)
+  :hook ((c-mode c++-mode objc-mode) . +setup-cquery)
   :init
   (setq cquery-extra-init-params '(:index (:comments 2)
                                           :cacheFormat "msgpack"
@@ -65,22 +50,15 @@
     (setq company-lsp-cache-candidates nil)
     (condition-case nil
         (lsp-cquery-enable)
-      (user-error nil)))
-  (add-hook! (c-mode c++-mode objc-mode) #'+setup-cquery))
+      (user-error nil))))
 
 (def-package! lsp-ocaml
   :when (featurep! +ocaml)
-  :commands (lsp-ocaml-enable)
-  :init
-  (add-hook! '(tuareg-mode-hook
-               reason-mode-hook)
-    #'lsp-ocaml-enable))
+  :hook ((tuareg-mode reason-mode) . lsp-ocaml-enable))
 
 (def-package! lsp-intellij
   :when (featurep! +java)
-  :commands (lsp-intellij-enable)
-  :init
-  (add-hook 'java-mode-hook #'lsp-intellij-enable))
+  :hook (java-mode . lsp-intellij-enable))
 
 
 (when (featurep! +python)
