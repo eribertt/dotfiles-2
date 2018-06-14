@@ -6,7 +6,6 @@
   (package! company-lsp)
 
   (when (featurep! +javascript)
-    ;; (package! lsp-javascript-typescript)
     (package! lsp-typescript
       :recipe (:fetcher
                github
