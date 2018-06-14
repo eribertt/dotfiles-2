@@ -47,7 +47,7 @@
         cquery-sem-highlight-method 'overlay) ;; set to 'font-lock if highlighting slowly
   (defun +setup-cquery ()
     (setq-local company-transformers nil)
-    (setq company-lsp-cache-candidates nil)
+    (setq-local company-lsp-cache-candidates nil)
     (condition-case nil
         (lsp-cquery-enable)
       (user-error nil))))
