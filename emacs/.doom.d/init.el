@@ -126,13 +126,14 @@
        :completion
        (lsp
         +javascript
-        +sh
-        +python
-        +rust
+        +go
         +css
+        +rust
         +cpp
         +ocaml
-        +java)
+        +java
+        +python
+        +sh)
 
        :config
        ;; The default module set reasonable defaults for Emacs. It also provides
