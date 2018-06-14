@@ -1,7 +1,7 @@
 ;;;  -*- lexical-binding: t; -*-
 
 (doom! :feature
-       ;debugger
+                                        ;debugger
        eval
        (evil +everywhere)
        file-templates
@@ -18,7 +18,7 @@
        dired
        ediff
        electric-indent
-       ;eshell
+                                        ;eshell
        imenu
        term
 
@@ -33,31 +33,31 @@
 
        :ui
        doom
-       ;doom-dashboard
+                                        ;doom-dashboard
        doom-modeline
        doom-quit
        evil-goggles
        hl-todo
        nav-flash
-       ;tabbar
+                                        ;tabbar
 
        vi-tilde-fringe
        window-select
        (popup
         +all
         +defaults)
-       ;neotree
+                                        ;neotree
        treemacs
 
        :tools
        gist
-       ;macos
+                                        ;macos
        make
        magit                            ;
        password-store
        pdf
        prodigy
-       ;rgb
+                                        ;rgb
        rotate-text
        tmux
        upload
@@ -66,7 +66,7 @@
 
        :lang
        assembly
-       (cc +irony)
+       cc
        crystal
        clojure
        csharp
@@ -78,7 +78,7 @@
        go
        (haskell +intero)
        hy
-       ;(java +meghanada)
+                                        ;(java +meghanada)
        javascript
        julia
        latex
@@ -95,12 +95,12 @@
         +present
         +publish)
        perl
-       ;php
+                                        ;php
        plantuml
        purescript
        python
        rest
-       ;ruby
+                                        ;ruby
        rust
        scala
        sh
@@ -111,16 +111,29 @@
        ;; toward a specific purpose. They may have additional dependencies and
        ;; should be loaded late.
        :app
-       ;(email +gmail)
+                                        ;(email +gmail)
        irc
-       ;(rss +org)
+                                        ;(rss +org)
        twitter
        (write
         +wordnut
         +langtool)
 
        :editor
-       lispyville
+       ;; lispyville
+       parinfer
+
+       :completion
+       (lsp
+        +javascript
+        +go
+        +css
+        +rust
+        +cpp
+        +ocaml
+        +java
+        +python
+        +sh)
 
        :config
        ;; The default module set reasonable defaults for Emacs. It also provides
