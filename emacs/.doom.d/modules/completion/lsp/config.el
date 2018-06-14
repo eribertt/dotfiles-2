@@ -4,7 +4,6 @@
   :commands (lsp-mode lsp-define-stdio-client))
 
 (def-package! lsp-ui
-  :commands (lsp-ui-mode)
   :hook (lsp-mode . lsp-ui-mode)
   :config
   (set! :lookup 'lsp-ui-mode
