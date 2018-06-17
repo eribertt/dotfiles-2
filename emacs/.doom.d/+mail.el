@@ -353,8 +353,8 @@ matched."
     (add-hook 'post-command-hook #'notmuch-show-command-hook nil t)
     (jit-lock-register #'notmuch-show-buttonise-links)
     (call-interactively #'+mail/buffer-face-mode-notmuch-show)
-    (let ((fill-column 120))
-      (visual-fill-column-mode))
+    ;; (let ((fill-column 120))
+    ;;   (visual-fill-column-mode))
     (notmuch-tag-clear-cache)
 
     (let ((inhibit-read-only t))
