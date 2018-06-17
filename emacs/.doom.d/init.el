@@ -48,6 +48,7 @@
         +defaults)
                                         ;neotree
        treemacs
+       pretty-code
 
        :tools
        gist

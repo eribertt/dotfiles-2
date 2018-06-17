@@ -16,6 +16,8 @@
 (setq doom-theme 'doom-nord)
 (setq +doom-modeline-buffer-file-name-style 'relative-from-project)
 
+(setq +pretty-code-iosevka-ligatures-enabled-by-default t) ;; I use Iosevka!
+
 ;; Thanks to bitwalker for this
 (after! neotree
   ;; When switching to a file in the current project, expand the directory
@@ -27,5 +29,4 @@
             ;; We need to trigger neotree-find then switch back to the buffer we just opened
             (save-current-buffer (neotree-find))))))
 
-(load! "+symbols")
 (load! "+magit")
