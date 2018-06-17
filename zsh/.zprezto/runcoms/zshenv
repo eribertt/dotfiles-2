@@ -12,7 +12,7 @@ fi
 
 export TERMINAL="xterm"
 
-source /usr/share/nvm/init-nvm.sh
+source ~/.zprezto/runcoms/lazy-load-nvm.sh
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 export GOPATH=~/projects/go
