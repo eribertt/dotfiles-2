@@ -17,7 +17,7 @@
        :emacs
        dired
        ediff
-       electric-indent
+       electric
                                         ;eshell
        imenu
        term

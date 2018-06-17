@@ -81,7 +81,7 @@
 ;; Set twitter edit buffer to be 15 lines high so I can actually see what im
 ;; editing. FIXME this will be fixed upstream, remove me when it is
 (after! twittering-mode
-  (set! :popup "^\\*twittering-edit"
+  (set-popup-rule! "^\\*twittering-edit"
     '((size . 15))
     '((transient) (quit) (select . t))))
 

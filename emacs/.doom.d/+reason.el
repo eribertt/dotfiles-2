@@ -22,9 +22,9 @@
         (merlin-mode))
     (setq-hook! reason-mode
         indent-region-function #'apply-refmt)
-    (set! :electric 'some-mode :chars '(?|))
-    (set! :lookup 'reason-mode
-        :definition #'merlin-locate
-        :references #'merlin-occurrences
-        :documentation #'merlin-document)
-    (set! :company-backend 'reason-mode 'merlin-company-backend)))
+    (set-electric! 'some-mode :chars '(?|))
+    (set-lookup-handlers! 'reason-mode
+                          :definition #'merlin-locate
+                          :references #'merlin-occurrences
+                          :documentation #'merlin-document)
+    (set-company-backend! 'reason-mode 'merlin-company-backend)))

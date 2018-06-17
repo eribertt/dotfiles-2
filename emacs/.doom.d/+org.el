@@ -16,7 +16,7 @@
   (setq org-bullets-bullet-list '("#"))
 
   ;; Normally its only like 3 lines tall, too hard to see anything.
-  (set! :popup "^\\*Org Agenda"
+  (set-popup-rule! "^\\*Org Agenda"
     '((size . 15))
     '((transient) (quit) (select . t))))
 

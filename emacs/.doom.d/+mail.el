@@ -45,11 +45,11 @@
                                  (:name "archived":query "tag:archived"                                       :key "a")
                                  (:name "drafts"  :query "tag:draft"                                          :key "d"))
         notmuch-archive-tags '("-inbox" "-unread" "+archived"))
-  (set! :evil-state 'notmuch-hello-mode 'normal)
-  (set! :evil-state 'notmuch-show-mode 'normal)
-  (set! :evil-state 'notmuch-search-mode 'normal)
-  (set! :evil-state 'notmuch-tree-mode 'normal)
-  (set! :evil-state 'notmuch-message-mode 'normal)
+  (set-evil-initial-state! '(notmuch-hello-mode
+                             notmuch-show-mode
+                             notmuch-search-mode
+                             notmuch-tree-mode
+                             notmuch-message-mode) 'normal)
   ;; (add-hook 'notmuch-tree-mode-hook '+mail/buffer-face-mode-notmuch)
   ;; (add-hook 'notmuch-search-mode-hook '+mail/buffer-face-mode-notmuch)
   ;; (add-hook 'notmuch-message-mode-hook '+mail/buffer-face-mode-notmuch)
@@ -67,7 +67,7 @@
   (advice-add #'notmuch-hello-insert-saved-searches :override #'+mail/notmuch-hello-insert-saved-searches)
   (advice-add #'notmuch-hello-insert-buttons :override #'+mail/notmuch-hello-insert-buttons)
   ;; (set! :popup "\\*notmuch-hello\\*" '((size . 20) (side . left)) '((quit . t) (modeline . nil)))
-  (set! :popup "\\*offlineimap\\*" '((side . bottom) (size . 0.4)) '((quit . t)))
+  (set-popup-rule! "\\*offlineimap\\*" '((side . bottom) (size . 0.4)) '((quit . t)))
   (push (lambda (buf) (string-match-p "^\\*notmuch" (buffer-name buf)))
         doom-real-buffer-functions)
 

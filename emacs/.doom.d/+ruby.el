@@ -9,7 +9,7 @@
   :commands (enh-ruby-mode)
   :config
   (add-hook 'enh-ruby-mode-hook #'flycheck-mode)
-  (set! :electric 'enh-ruby-mode :words '("else" "end" "elseif"))
+  (set-electric! 'enh-ruby-mode :words '("else" "end" "elseif"))
 
 
   (defun tab-or-snippet-expand ()
