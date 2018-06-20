@@ -18,8 +18,11 @@
 
   ;; Normally its only like 3 lines tall, too hard to see anything.
   (set-popup-rule! "^\\*Org Agenda"
-    '((size . 15))
-    '((transient) (quit) (select . t))))
+    :size 15
+    :quit t
+    :select t
+    :parameters
+    '((transient))))
 
 ;; org-match-sparse-tree
 ;; org-set-tags-command
