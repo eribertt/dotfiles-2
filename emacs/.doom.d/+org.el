@@ -35,9 +35,22 @@
  (:leader
    :desc "Open todo file" :nvm "O" #'+open-todo-file))
 
+(defun +show-agenda ()
+  (interactive)
+  (delete-other-windows)
+  (with-popup-rules! nil
+    (org-agenda-list)
+    (calendar))
+  (other-window 1)
+  (split-window-vertically)
+  (other-window 1)
+  (todays-daypage))
+
+
 (map! :leader
       (:prefix "o"
-        :desc "Org Agenda" :nvm "a" (lambda! (org-agenda nil "a")))
+        :desc "Org Agenda" :nvm "a" #'org-agenda-list
+        :desc "Org Agenda and Notes" :nvm "A" #'+show-agenda)
       (:when (featurep! :completion helm)
         :nv "X" #'helm-org-capture-templates))
 
