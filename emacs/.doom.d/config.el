@@ -13,10 +13,10 @@
 (after! yasnippet
   (push (expand-file-name "snippets/" doom-private-dir) yas-snippet-dirs))
 
-(after! auth-source
-  (let ((auth (plist-get (nth 0 (auth-source-search :host "wakatime.com")) :secret)))
-    (if (functionp auth)
-        (setq wakatime-api-key (funcall auth)))))
+;; (after! auth-source
+;;   (let ((auth (plist-get (nth 0 (auth-source-search :host "wakatime.com")) :secret)))
+;;     (if (functionp auth)
+;;         (setq wakatime-api-key (funcall auth)))))
 
 
 (defun setup-prettier-js ()
