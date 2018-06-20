@@ -1,6 +1,7 @@
 ;;;  -*- lexical-binding: t; -*-
 
 (setq +todo-file "~/org/todo.org")
+(setq +daypage-path "~/org/days/")
 
 (after! org
   (map! :map evil-org-mode-map
@@ -37,3 +38,31 @@
       (:when (featurep! :completion helm)
         :nv "X" #'helm-org-capture-templates))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Daypage stuff
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun find-daypage (&optional date)
+  "Go to the day page for the specified date, or today's if none is specified"
+  (interactive (list
+                (org-read-date "" 'totime nil nil
+                               (current-time) "")))
+  (setq date (or date (current-time)))
+  (find-file
+   (expand-file-name (concat +daypage-path
+                             (format-time-string "%Y-%m-%d" date)
+                             ".org"))))
+
+(defun todays-daypage ()
+  "Go straight to today's day page without prompting for a date."
+  (interactive)
+  (find-daypage))
+
+(set-file-template!
+ "/[0-9]\\{4\\}\\(?:-[0-9]\\{2\\}\\)\\{2\\}\\.org$"
+ :trigger "__daypage")
+
+(map! :leader
+      :prefix "n"
+      :nv "o" #'todays-daypage
+      :nv "O" #'find-daypage)
