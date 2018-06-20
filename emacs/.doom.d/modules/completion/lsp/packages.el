@@ -3,7 +3,7 @@
 
 (when (package! lsp-mode)
   (package! lsp-ui)
-  (package! company-lsp)
+  ;; (package! company-lsp)
 
   (when (featurep! +javascript)
     (package! lsp-typescript

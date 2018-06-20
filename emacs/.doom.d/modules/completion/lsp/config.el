@@ -18,10 +18,12 @@
   :hook ((js2-mode typescript-mode) . lsp-typescript-enable))
 
 (def-package! company-lsp
+  :disabled t
   :after lsp-mode
   :config
   (set-company-backend! 'lsp-mode 'company-lsp)
-  (setq company-lsp-enable-recompletion t))
+  (setq company-lsp-enable-recompletion t
+        company-lsp-cache-candidates nil))
 
 (def-package! lsp-go
   :when (featurep! +go)
