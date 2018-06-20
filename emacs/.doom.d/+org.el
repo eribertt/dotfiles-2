@@ -60,14 +60,10 @@
 
 (defun find-daypage (&optional date)
   "Go to the day page for the specified date, or today's if none is specified"
-  (interactive (list
-                (org-read-date "" 'totime nil nil
-                               (current-time) "")))
-  (setq date (or date (current-time)))
+  (interactive (list (org-read-date)))
+  (setq date (or date (format-time-string "%Y-%m-%d" (current-time))))
   (find-file
-   (expand-file-name (concat +daypage-path
-                             (format-time-string "%Y-%m-%d" date)
-                             ".org"))))
+   (expand-file-name (concat +daypage-path date ".org"))))
 
 (defun todays-daypage ()
   "Go straight to today's day page without prompting for a date."
