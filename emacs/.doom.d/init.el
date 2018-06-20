@@ -63,7 +63,7 @@
        tmux
        upload
        editorconfig
-       wakatime
+       ; wakatime
 
        :lang
        assembly
