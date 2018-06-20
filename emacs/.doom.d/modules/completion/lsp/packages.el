@@ -38,4 +38,7 @@
     (package! lsp-ocaml))
 
   (when (featurep! +java)
-    (package! lsp-intellij)))
+    (package! lsp-intellij))
+
+  (when (featurep! +sh)
+    (package! company-shell :disable t)))
