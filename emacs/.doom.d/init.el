@@ -11,7 +11,6 @@
        snippets
        spellcheck
        syntax-checker ;;+childframe)
-       version-control
        workspaces
 
        :emacs
@@ -21,6 +20,7 @@
                                         ;eshell
        imenu
        term
+       vc
 
        :completion
        (company
@@ -40,6 +40,7 @@
        hl-todo
        nav-flash
                                         ;tabbar
+       vc-gutter
 
        vi-tilde-fringe
        window-select
@@ -59,7 +60,6 @@
        pdf
        prodigy
                                         ;rgb
-       rotate-text
        tmux
        upload
        editorconfig
@@ -123,6 +123,7 @@
        :editor
        ;; lispyville
        parinfer
+       rotate-text
 
        :completion
        (lsp
