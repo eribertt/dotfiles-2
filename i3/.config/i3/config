@@ -34,7 +34,7 @@ floating_modifier $mod
 exec --no-startup-id betterlockscreen -w
 bindsym $mod+shift+x exec --no-startup-id betterlockscreen -l dimblur
 # binds
-bindsym $mod+Return exec --no-startup-id hyper
+bindsym $mod+Return exec --no-startup-id gnome-terminal
 bindsym $mod+a exec --no-startup-id zsh -c emacs
 bindsym $mod+w exec --no-startup-id qutebrowser
 bindsym Print exec --no-startup-id spectacle
