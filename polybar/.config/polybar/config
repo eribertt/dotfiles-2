@@ -28,7 +28,7 @@ bottom = true
 dock = false
 wm-restack = i3
 
-monitor = eDP1
+; monitor = eDP1
 
 fixed-center = true
 
@@ -57,7 +57,7 @@ tray-position = left
 ;modules-center = mpd
 ;modules-left = cpu memory filesystem
 
-modules-right = mpd email battery i3 menu0
+modules-right = email battery i3 menu0
 modules-center = date
 modules-left = cpu cputemp memory updates
 
