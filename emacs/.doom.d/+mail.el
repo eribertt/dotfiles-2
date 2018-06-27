@@ -168,23 +168,18 @@
 (defun =mail ()
   "Activate (or switch to) `notmuch' in its workspace."
   (interactive)
-  (unless (featurep! :feature workspaces)
-    (user-error ":feature workspaces is required, but disabled"))
-  (+workspace-switch "*MAIL*" t)
   (if-let* ((buf (cl-find-if (lambda (it) (string-match-p "^\\*notmuch" (buffer-name (window-buffer it))))
                              (doom-visible-windows))))
       (select-window (get-buffer-window buf))
-    (notmuch-search "tag:inbox"))
+    (notmuch-search "tag:inbox")))
   ;; (call-interactively 'notmuch-hello-sidebar)
 
-  (+workspace/display))
 
 ;;;###autoload
 (defun +mail/quit ()
   (interactive)
   ;; (+popup/close (get-buffer-window "*notmuch-hello*"))
-  (doom-kill-matching-buffers "^\\*notmuch")
-  (+workspace/delete "*MAIL*"))
+  (doom-kill-matching-buffers "^\\*notmuch"))
 
 ;;;###autoload
 (defun +mail/buffer-face-mode-notmuch-show ()
