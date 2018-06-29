@@ -29,4 +29,6 @@
             ;; We need to trigger neotree-find then switch back to the buffer we just opened
             (save-current-buffer (neotree-find))))))
 
+(set-pretty-symbols! 'haskell-mode :iosevka t)
+(set-pretty-symbols! 'clojure-mode :iosevka t)
 (load! "+magit")
