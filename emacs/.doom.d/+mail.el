@@ -67,7 +67,7 @@
   (advice-add #'notmuch-hello-insert-saved-searches :override #'+mail/notmuch-hello-insert-saved-searches)
   (advice-add #'notmuch-hello-insert-buttons :override #'+mail/notmuch-hello-insert-buttons)
   ;; (set! :popup "\\*notmuch-hello\\*" '((size . 20) (side . left)) '((quit . t) (modeline . nil)))
-  (set-popup-rule! "\\*offlineimap\\*" '((side . bottom) (size . 0.4)) '((quit . t)))
+  (set-popup-rule! "\\*offlineimap\\*" :side 'bottom :size 0.4 :quit t)
   (push (lambda (buf) (string-match-p "^\\*notmuch" (buffer-name buf)))
         doom-real-buffer-functions)
 
