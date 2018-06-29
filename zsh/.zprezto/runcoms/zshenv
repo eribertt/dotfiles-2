@@ -31,3 +31,7 @@ lazy_rbenvcallback() {
 }
 lazyload pyenv ~/.pyenv/versions -- lazy_pyenvcallback
 lazyload rbenv ~/.rbenv/versions -- lazy_rbenvcallback
+
+export RUST_SRC_PATH="$HOME/rust/src"
+
+export PATH="$HOME/.local/bin/:$PATH"
