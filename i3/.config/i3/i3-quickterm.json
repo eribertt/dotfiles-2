@@ -1,0 +1,4 @@
+{
+    "menu": "rofi -dmenu -p quickterm -no-custom -auto-select",
+    "term": "gnome-terminal"
+}
