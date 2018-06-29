@@ -16,13 +16,14 @@
     (fetch-password :user "ar1a" :host server))
 
   ;; Freenode
-  (set! :irc "irc.freenode.net"
-    '(:use-tls t
-           :port 6697
-           :nick "ar1a"
-           :sasl-username "ar1a"
-           :sasl-password irc-password
-           :channels ("#emacs"))))
+  (set-irc-server! "irc.freenode.net"
+                   '(:use-tls
+                     t
+                     :port 6697
+                     :nick "ar1a"
+                     :sasl-username "ar1a"
+                     :sasl-password irc-password
+                     :channels ("#emacs"))))
 
 
 (map! :leader
