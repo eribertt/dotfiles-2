@@ -36,6 +36,8 @@ bindsym $mod+shift+x exec --no-startup-id betterlockscreen -l dimblur
 # binds
 bindsym $mod+Return exec --no-startup-id gnome-terminal
 bindsym $mod+a exec --no-startup-id zsh -c emacs
+bindsym $mod+e exec --no-startup-id zsh -c ~/.emacs_anywhere/bin/run
+bindsym $mod+p exec --no-startup-id zsh -c "i3-quickterm shell"
 bindsym $mod+w exec --no-startup-id qutebrowser
 bindsym Print exec --no-startup-id spectacle
 
