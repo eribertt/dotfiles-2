@@ -39,6 +39,7 @@ bindsym $mod+a exec --no-startup-id zsh -c emacs
 bindsym $mod+e exec --no-startup-id zsh -c ~/.emacs_anywhere/bin/run
 bindsym $mod+p exec --no-startup-id zsh -c "i3-quickterm shell"
 bindsym $mod+w exec --no-startup-id qutebrowser
+bindsym $mod+space exec --no-startup-id rofi-pass
 bindsym Print exec --no-startup-id spectacle
 
 # kill focused window
@@ -93,7 +94,7 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 # bindsym $mod+a focus parent
