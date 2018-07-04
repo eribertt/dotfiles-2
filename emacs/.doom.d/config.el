@@ -1,6 +1,4 @@
 ;;;  -*- lexical-binding: t; -*-
-(require 'prettier-js)
-
 (setq-default evil-shift-width 2 ;; I normally use 2wide for my projects.
               tab-width 2)
 
@@ -19,28 +17,28 @@
 ;;         (setq wakatime-api-key (funcall auth)))))
 
 
-(defun setup-prettier-js ()
-  "Sets up arguments and the mode."
-  (interactive)
-  (setq prettier-js-args '("--single-quote"))
+(def-package! prettier-js
+  :commands (prettier-js-mode)
+  :init
+  (defun setup-prettier-js ()
+    "Sets up arguments and the mode."
+    (interactive)
+    (setq prettier-js-args '("--single-quote"))
 
-  (prettier-js-mode))
+    (prettier-js-mode))
+  (add-hook! (typescript-mode
+              js2-mode)
+    #'setup-prettier-js)
+  (add-hook! web-mode (enable-minor-mode '("\\.tsx\\'" . setup-prettier-js))))
 
-
-;; Prettier in .tsx
 (after! typescript-mode
   (add-hook 'typescript-mode-hook #'flycheck-mode)
-  ;; Prettier shit
-  (add-hook 'typescript-mode-hook #'setup-prettier-js)
   (setq typescript-indent-level 2))
 
 
 (after! js2-mode
   ;; use eslintd-fix so when i save it fixes dumb shit
   (add-hook 'js2-mode-hook #'eslintd-fix-mode)
-
-  ;; Prettier shit
-  (add-hook 'js2-mode-hook #'setup-prettier-js)
 
   ;; Indent shit
   (setq js2-basic-offset 2))
@@ -55,8 +53,6 @@
 
 (after! web-mode
   (add-hook 'web-mode-hook #'flycheck-mode)
-
-  (add-hook! web-mode (enable-minor-mode '("\\.tsx\\'" . setup-prettier-js)))
 
   (setq web-mode-markup-indent-offset 2 ;; Indentation
         web-mode-code-indent-offset 2
