@@ -127,7 +127,7 @@
 
        :completion
        (lsp
-        +javascript
+        ;; +javascript
         +go
         +css
         +rust
