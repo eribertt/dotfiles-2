@@ -1,6 +1,7 @@
 ;;;  -*- lexical-binding: t; -*-
 
-(setq +todo-file "~/org/todo.org")
+(setq +todo-file "~/org/todo.org"
+      org-agenda-files '("~/org"))
 (setq +daypage-path "~/org/days/")
 
 (after! org
