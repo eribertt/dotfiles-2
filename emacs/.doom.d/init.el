@@ -27,13 +27,16 @@
         +auto)
 
                                         ;the ultimate code completion backend
-       (helm +fuzzy)                    ;+childframe)
+       ;; (helm +fuzzy)                    ;+childframe)
                                         ;ido
-       ;; (ivy) ;;+childframe)
+       (ivy
+        +childframe
+        +fuzzy)
+
 
        :ui
        doom
-                                        ;doom-dashboard
+       doom-dashboard
        doom-modeline
        doom-quit
        evil-goggles
