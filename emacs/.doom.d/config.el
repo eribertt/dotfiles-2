@@ -5,6 +5,8 @@
 (setq user-mail-address "aria@ar1as.space"
       user-full-name "Aria Edm")
 
+(delq 'rg +helm-project-search-engines) ;; rg is kinda buggy, and i prefer ag
+
 (add-hook 'prog-mode-hook #'goto-address-mode) ;; Linkify links!
 
 ;; Load snippets
