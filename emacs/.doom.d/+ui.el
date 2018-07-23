@@ -1,7 +1,7 @@
 ;;;  -*- lexical-binding: t; -*-
 
 ;; Fonts
-(setq doom-font (font-spec :family "Iosevka" :size 21))
+(setq doom-font (font-spec :family "Iosevka" :size 18))
 (setq doom-big-font (font-spec :family "Iosevka" :size 25))
 
 ;; Dash highlighting
@@ -13,7 +13,7 @@
 ;; Change theme.
 ;; Nord is pretty cool: https://github.com/arcticicestudio/nord
 ;; A nice alternative (although brighter) could be: nova - https://trevordmiller.com/projects/nova
-(setq doom-theme 'doom-nord)
+;; (setq doom-theme 'doom-nord)
 (setq +doom-modeline-buffer-file-name-style 'relative-from-project)
 
 (setq +pretty-code-iosevka-ligatures-enabled-by-default t) ;; I use Iosevka!
