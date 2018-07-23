@@ -27,11 +27,11 @@
         +auto)
 
                                         ;the ultimate code completion backend
-       ;; (helm +fuzzy)                    ;+childframe)
+       (helm +fuzzy)                    ;+childframe)
                                         ;ido
-       (ivy
-        +childframe
-        +fuzzy)
+       ;; (ivy
+       ;;  +childframe
+       ;;  +fuzzy)
 
 
        :ui
@@ -89,7 +89,7 @@
        ledger
        lua
        markdown
-       nix
+       ; nix
        ocaml
        (org
         +attach
