@@ -28,3 +28,5 @@ alias 'd.=$(mktemp -d)'
 
 alias path="sed 's/:/\n/g' <<< $PATH"
 alias l="light -S"
+
+alias k="k -h"

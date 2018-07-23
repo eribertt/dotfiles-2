@@ -40,7 +40,8 @@ zstyle ':prezto:load' pmodule \
   'pacman' \
   'history-substring-search' \
   'autosuggestions' \
-  'git'
+  'git' \
+  'k'
 
 #
 # Autosuggestions

@@ -28,3 +28,6 @@
 [submodule "zsh/.zprezto/modules/prompt/external/powerlevel9k"]
 	path = zsh/.zprezto/modules/prompt/external/powerlevel9k
 	url = https://github.com/bhilburn/powerlevel9k.git
+[submodule "zsh/.zprezto/modules/k"]
+	path = zsh/.zprezto/modules/k
+	url = https://github.com/supercrabtree/k
