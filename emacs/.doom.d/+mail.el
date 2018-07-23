@@ -29,7 +29,7 @@
         message-send-mail-function 'message-send-mail-with-sendmail
         notmuch-search-oldest-first nil
         send-mail-function 'sendmail-send-it
-        sendmail-program "/usr/local/bin/msmtp"
+        ;; sendmail-program "/usr/local/bin/msmtp"
         notmuch-search-result-format '(("date" . "%12s ")
                                        ("count" . "%-7s ")
                                        ("authors" . "%-30s ")
