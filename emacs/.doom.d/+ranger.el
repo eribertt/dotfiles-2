@@ -1,7 +1,9 @@
 ;;;  -*- lexical-binding: t; -*-
 
 (def-package! ranger
-  :commands (ranger deer ranger-override-dired-fn))
+  :commands (ranger deer ranger-override-dired-fn)
+  :config
+  (set-popup-rule! "^\\*ranger" :ignore t))
 
 (map!
  (:leader
