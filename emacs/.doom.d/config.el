@@ -69,12 +69,7 @@
   ;; I want backspace to go up a level, like ivy
   (add-hook! 'helm-find-files-after-init-hook
     (map! :map helm-find-files-map
-          "<DEL>" #'helm-find-files-up-one-level))
-
-  (map! :leader
-        (:prefix "/"
-          ;; This is bound to ivy project search in :config default +bindings
-          :nv "p" #'helm-do-ag-project-root)))
+          "<DEL>" #'helm-find-files-up-one-level)))
 
 ;; Set twitter edit buffer to be 15 lines high so I can actually see what im
 ;; editing. FIXME this will be fixed upstream, remove me when it is
