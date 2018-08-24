@@ -52,7 +52,7 @@
         +defaults)
                                         ;neotree
        treemacs
-       pretty-code
+       (pretty-code +fira)
 
        :tools
        gist
