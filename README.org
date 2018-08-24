@@ -30,3 +30,5 @@ also have a .msmtprc in my home directory. You can see how to configure that [[h
 ** Offlineimap
 You will need to create a python file called ~decrypt.py~ with a function
 mailpasswd() that returns the password
+** Rofi
+You have to install `rofi-pass` for pass-store integration.
