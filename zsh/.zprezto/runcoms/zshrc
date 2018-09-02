@@ -30,3 +30,6 @@ alias path="sed 's/:/\n/g' <<< $PATH"
 alias l="light -S"
 
 alias k="k -h"
+
+[[ -e /usr/share/fzf/key-bindings.zsh ]] && . /usr/share/fzf/key-bindings.zsh
+[[ -e /usr/share/fzf/completion.zsh ]] && . /usr/share/fzf/completion.zsh
