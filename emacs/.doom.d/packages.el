@@ -7,11 +7,10 @@
 (package! rinari)
 (package! rubocop)
 
-;; lsp stuff
-;; (package! lsp-mode)
-;; (package! lsp-ui)
-;; (package! company-lsp)
-;; (package! lsp-javascript-typescript)
+;; Misc stuff
+;; Can highlight a region and hit M-x carbon-now-sh to get a https://carbon.now
+;; of the region
+(package! carbon-now-sh)
 
 ;; JS stuff
 (package! prettier-js)
