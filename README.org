@@ -32,3 +32,5 @@ You will need to create a python file called ~decrypt.py~ with a function
 mailpasswd() that returns the password
 ** Rofi
 You have to install `rofi-pass` for pass-store integration.
+
+You can also install rofimoji for an emoji picker https://github.com/fdw/rofimoji
