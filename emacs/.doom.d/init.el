@@ -17,7 +17,7 @@
        dired
        ediff
        electric
-                                        ;eshell
+       eshell
        imenu
        term
        vc
