@@ -59,7 +59,7 @@
   (setq web-mode-markup-indent-offset 2 ;; Indentation
         web-mode-code-indent-offset 2
         web-mode-enable-auto-quoting nil ;; disbale adding "" after an =
-        web-mode-auto-close-style 3)) ;; RJSX-mode style closing
+        web-mode-auto-close-style 2))
 
 (after! elm
   (setq elm-tags-on-save t
