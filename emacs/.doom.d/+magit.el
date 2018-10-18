@@ -6,6 +6,11 @@
 (after! magit
   (magit-wip-after-save-mode t)
   (magit-wip-after-apply-mode t)
+  (magit-define-popup-option 'magit-rebase-popup
+                             ?S
+                             "Sign using gpg"
+                             "--gpg-sign="
+                             #'magit-read-gpg-secret-key)
   (setq magit-save-repository-buffers 'dontask
         magit-repository-directories '(("/home/aria/projects/" . 3)
                                        ("/home/aria/dotfiles/" . 0))
