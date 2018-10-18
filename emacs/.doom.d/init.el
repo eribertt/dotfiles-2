@@ -80,7 +80,7 @@
        emacs-lisp
        ess
        go
-       (haskell +intero)
+       (haskell +dante)
        hy
                                         ;(java +meghanada)
        javascript
