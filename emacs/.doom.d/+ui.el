@@ -1,5 +1,7 @@
 ;;;  -*- lexical-binding: t; -*-
 
+(setq doom-theme 'doom-snazzy)
+
 ;; Fonts
 (setq doom-font (font-spec :family "Fantasque Sans Mono" :size 18))
 ;; On my (almost) 1440p monitor, 28pt Hack gives me about 30 lines and maybe
