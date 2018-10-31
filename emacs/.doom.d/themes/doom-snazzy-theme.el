@@ -47,17 +47,17 @@
    (ui12 '("#192224" nil nil))
 
    (grey       ui5)
-   (red        '("#ff5c57" "#ff6655" "red"))
-   (green      '("#5af78e" "#99bb66" "green"))
-   (yellow     '("#f3f99d" "#ECBE7B" "yellow"))
-   (blue       '("#57c7ff" "#51afef" "brightblue"))
-   (dark-blue  '("#459fcc"  "#51afef" "brightblue"))
-   (magenta    '("#ff6ac1" "#c678dd" "brightmagenta"))
-   (cyan       '("#9aedfe" "#46D9FF" "brightcyan"))
-   (violet     '("#bd93f9" "#46D9FF" "brightcyan"))
-   (orange     '("#ffb86c" "#46D9FF" "brightcyan"))
-   (teal       '("#aad4d3" "#46D9FF" "brightcyan"))
-   (dark-cyan  '("#82c9d7" "#46D9FF" "brightcyan"))
+   (red        '("#ff5c57" nil nil))
+   (green      '("#5af78e" nil nil))
+   (yellow     '("#f3f99d" nil nil))
+   (blue       '("#57c7ff" nil nil))
+   (dark-blue  '("#459fcc" nil nil))
+   (magenta    '("#ff6ac1" nil nil))
+   (cyan       '("#9aedfe" nil nil))
+   (violet     '("#bd93f9" nil nil))
+   (orange     '("#ffb86c" nil nil))
+   (teal       '("#aad4d3" nil nil))
+   (dark-cyan  '("#82c9d7" nil nil))
 
    ;; face categories -- required for all themes
    (highlight      blue) ;; when searching with (/) ?
