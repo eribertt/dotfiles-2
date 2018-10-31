@@ -46,7 +46,7 @@
    (ui11 '("#282a36" nil nil))
    (ui12 '("#192224" nil nil))
 
-   (grey       base4)
+   (grey       ui5)
    (red        '("#ff5c57" "#ff6655" "red"))
    (green      '("#5af78e" "#99bb66" "green"))
    (yellow     '("#f3f99d" "#ECBE7B" "yellow"))
@@ -54,10 +54,10 @@
    (dark-blue  '("#459fcc"  "#51afef" "brightblue"))
    (magenta    '("#ff6ac1" "#c678dd" "brightmagenta"))
    (cyan       '("#9aedfe" "#46D9FF" "brightcyan"))
-   (violet     '("#ff0000" "#46D9FF" "brightcyan"))
-   (orange     '("#ff0000" "#46D9FF" "brightcyan"))
-   (teal       '("#ff0000" "#46D9FF" "brightcyan"))
-   (dark-cyan  '("#ff0000" "#46D9FF" "brightcyan"))
+   (violet     '("#bd93f9" "#46D9FF" "brightcyan"))
+   (orange     '("#ffb86c" "#46D9FF" "brightcyan"))
+   (teal       '("#aad4d3" "#46D9FF" "brightcyan"))
+   (dark-cyan  '("#82c9d7" "#46D9FF" "brightcyan"))
 
    ;; face categories -- required for all themes
    (highlight      blue) ;; when searching with (/) ?
