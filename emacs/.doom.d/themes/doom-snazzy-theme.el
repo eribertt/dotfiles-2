@@ -70,7 +70,7 @@
                                              ;; documentation or git commit first line thing
    (constants      green)
    (functions      blue)
-   (keywords       magenta)
+   (keywords       orange)
    (methods        blue) ;; wtf is the difference between this and function?
    (operators      magenta)
    (type           cyan)
