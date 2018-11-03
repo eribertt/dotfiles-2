@@ -78,13 +78,13 @@
     '((size . 15))
     '((transient) (quit) (select . t))))
 
-;; Modules
-(load! "+ruby") ;; Custom ruby mode. Make sure you disable ruby in init.el
-(load! "+ui") ;; My ui mods. Also contains ligature stuff.
-(load! "+music") ;; Music stuff, visible through SPC-a-m. Not perfect.
-(load! "+ranger") ;; File manager stuff
-(load! "+reason") ;; ReasonML stuff
-(load! "+mail") ;; Mail stuff
-(load! "+org") ;; Org mode stuff like todos and rebindings
-(load! "+irc") ;; Irc config
+                   ;; Modules
+(load! "+ruby")    ;; Custom ruby mode. Make sure you disable ruby in init.el
+(load! "+ui")      ;; My ui mods. Also contains ligature stuff.
+(load! "+music")   ;; Music stuff, visible through SPC-a-m. Not perfect.
+(load! "+ranger")  ;; File manager stuff
+(load! "+reason")  ;; ReasonML stuff
+(load! "+mail")    ;; Mail stuff
+(load! "+org")     ;; Org mode stuff like todos and rebindings
+(load! "+irc")     ;; Irc config
 (load! "+twitter") ;; Twittering binds.
