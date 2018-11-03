@@ -66,7 +66,8 @@
    (selection      dark-blue) ;; for like company autocomplete and stuff
    (builtin        magenta) ;; saw this in company autocomplete if i moved my mouse over it
    (comments       ui8) ;; comments
-   (doc-comments   (doom-lighten base5 0.25)) ;; dont really doc with comments so i cant test this.
+   (doc-comments (doom-lighten yellow 0.25)) ;; easy to test with elisp
+                                             ;; documentation or git commit first line thing
    (constants      green)
    (functions      blue)
    (keywords       magenta)
