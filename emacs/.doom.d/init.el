@@ -1,7 +1,7 @@
 ;;;  -*- lexical-binding: t; -*-
 
 (doom! :feature
-                                        ;debugger
+                                        ;;debugger
        eval
        (evil +everywhere)
        file-templates
@@ -26,9 +26,9 @@
        (company
         +auto)
 
-                                        ;the ultimate code completion backend
-       (helm +fuzzy)                    ;+childframe)
-                                        ;ido
+                                        ;;the ultimate code completion backend
+       (helm +fuzzy)                    ;;+childframe)
+                                        ;;ido
        ;; (ivy
        ;;  +childframe
        ;;  +fuzzy)
@@ -42,7 +42,7 @@
        evil-goggles
        hl-todo
        nav-flash
-                                        ;tabbar
+                                        ;;tabbar
        vc-gutter
 
        vi-tilde-fringe
@@ -50,23 +50,23 @@
        (popup
         +all
         +defaults)
-                                        ;neotree
+                                        ;;neotree
        treemacs
        (pretty-code +fira)
 
        :tools
        gist
-                                        ;macos
+                                        ;;macos
        make
-       magit                            ;
+       magit                            ;;
        password-store
        pdf
        prodigy
-                                        ;rgb
+                                        ;;rgb
        tmux
        upload
        editorconfig
-       ; wakatime
+       ;; wakatime
 
        :lang
        assembly
@@ -82,14 +82,14 @@
        go
        (haskell +dante)
        hy
-                                        ;(java +meghanada)
+                                        ;;(java +meghanada)
        javascript
        julia
        latex
        ledger
        lua
        markdown
-       ; nix
+       ;; nix
        ocaml
        (org
         +attach
@@ -99,12 +99,12 @@
         +present
         +publish)
        perl
-                                        ;php
+                                        ;;php
        plantuml
        purescript
        python
        rest
-                                        ;ruby
+                                        ;;ruby
        rust
        scala
        sh
@@ -115,9 +115,9 @@
        ;; toward a specific purpose. They may have additional dependencies and
        ;; should be loaded late.
        :app
-                                        ;(email +gmail)
+                                        ;;(email +gmail)
        irc
-                                        ;(rss +org)
+                                        ;;(rss +org)
        twitter
        (write
         +wordnut

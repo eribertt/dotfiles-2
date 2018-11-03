@@ -61,7 +61,7 @@
 
    ;; face categories -- required for all themes
    (highlight      blue) ;; when searching with (/) ?
-   ;; (vertical-bar   (doom-darken base1 0.1)) ; no idea what this is
+   ;; (vertical-bar   (doom-darken base1 0.1)) ;; no idea what this is
    (vertical-bar (doom-darken base1 0.1)) ;; the bar that separates modeline and
                                           ;; minibuffer?
    (selection      dark-blue) ;; for like company autocomplete and stuff
