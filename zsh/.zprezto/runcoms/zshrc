@@ -29,7 +29,7 @@ alias 'd.=$(mktemp -d)'
 alias path="sed 's/:/\n/g' <<< $PATH"
 alias l="light -S"
 
-alias k="k -h"
+alias k="exa -lh"
 
 [[ -e /usr/share/skim/key-bindings.zsh ]] && . /usr/share/skim/key-bindings.zsh
 [[ -e /usr/share/skim/completion.zsh ]] && . /usr/share/skim/completion.zsh
