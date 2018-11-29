@@ -33,3 +33,6 @@ alias k="k -h"
 
 [[ -e /usr/share/skim/key-bindings.zsh ]] && . /usr/share/skim/key-bindings.zsh
 [[ -e /usr/share/skim/completion.zsh ]] && . /usr/share/skim/completion.zsh
+
+
+alias ag="echo use rg"
