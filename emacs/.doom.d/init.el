@@ -133,7 +133,7 @@
         ;; +javascript
         +go
         +css
-        +rust
+        ;+rust
         +cpp
         +ocaml
         +java
