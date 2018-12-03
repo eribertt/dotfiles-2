@@ -7,6 +7,9 @@
 
 (add-hook 'prog-mode-hook #'goto-address-mode) ;; Linkify links!
 
+;; Format elixir on save
+(add-hook 'elixir-mode-hook (lambda () (add-hook 'before-save-hook #'elixir-format nil t)))
+
 ;; Load snippets
 (after! yasnippet
   (push (expand-file-name "snippets/" doom-private-dir) yas-snippet-dirs))
