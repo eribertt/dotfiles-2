@@ -78,7 +78,7 @@
        elixir
        elm
        emacs-lisp
-       ess
+       ;ess
        go
        (haskell +dante)
        hy
