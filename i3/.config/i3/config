@@ -35,7 +35,7 @@ exec --no-startup-id betterlockscreen -w
 exec --no-startup-id zsh /home/aria/tmuxify.sh
 bindsym $mod+shift+x exec --no-startup-id betterlockscreen -l dimblur
 # binds
-bindsym $mod+Return exec --no-startup-id gnome-terminal
+bindsym $mod+Return exec --no-startup-id termite
 bindsym $mod+a exec --no-startup-id zsh -c emacs
 bindsym $mod+e exec --no-startup-id zsh -c rofimoji
 bindsym $mod+p exec --no-startup-id zsh -c "i3-quickterm shell"
