@@ -180,7 +180,7 @@ exec_always --no-startup-id ~/.config/i3/polybar.sh
 exec --no-startup-id compton &
 
 # Global gaps size
-gaps inner 10 gaps outer 15
+# gaps inner 10 gaps outer 15
 for_window [class="^.*"] border pixel 1
 
 assign [class="discord"] $ws3
