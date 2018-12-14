@@ -7,20 +7,20 @@ margin-bottom = 100
 
 [colors]
 
-fg = ${xrdb:color7}
-modfg = ${xrdb:color3}
-alt = ${xrdb:color2}
-alt2 = ${xrdb:color1}
-bg = ${xrdb:color0}
+fg = #ff0000
+modfg = #eff0eb
+alt = #00ff00
+alt2 = #0000ff
+bg = #282a36
 
 
-white = #d1d1d1
+white = #eff0eb
 gray = #585858
-black = #ff121212
-red = #c795ae
-blue = #95aec7
-yellow = #c7ae95
-green = #aec795
+black = #282a36
+red = #ff5c57
+blue = #57c7ff
+yellow = #f3f99d
+green = #5af78e
 
 
 [bar/Bar]
@@ -57,9 +57,9 @@ tray-position = left
 ;modules-center = mpd
 ;modules-left = cpu memory filesystem
 
-modules-right = email battery i3 menu0
+modules-right = battery i3 menu0
 modules-center = date
-modules-left = cpu cputemp memory updates
+modules-left = cpu memory updates
 
 separator = "      "
 
@@ -109,14 +109,14 @@ index-sort = true
 label-focused = %index%
 label-focused-padding = 1
 label-focused-foreground = ${colors.bg}
-label-focused-background = ${colors.modfg}
+label-focused-background = ${colors.green}
 
 label-unfocused = %index%
 label-unfocused-padding = 1
 ;label-unfocused-background = ${colors.black}
 
 label-urgent = %index%
-label-urgent-background = ${colors.alt}
+label-urgent-background = ${colors.red}
 label-urgent-padding = 1
 
 label-visible = %index%
@@ -196,19 +196,20 @@ type = internal/cpu
 interval = 2
 label = " %percentage%%"
 
-;label-underline = ${colors.modfg}
+label-foreground = ${colors.red}
+;label-underline = ${colors.red}
 ;label-background = ${colors.bg}
-;label-overline = ${colors.white}
+;label-overline = ${colors.red}
 
 
 [module/memory]
 type = internal/memory
 interval = 2
 
-label = " %percentage_used%%"
+label = " %gb_used%/%gb_total%"
 ;label = RAM %percentage_used%%
 ;label-underline = ${colors.modfg}
-;label-foreground = ${colors.modfg}
+label-foreground = ${colors.yellow}
 ;label-background = ${colors.bg}
 
 
@@ -253,7 +254,7 @@ interval = 1
 
 ;format-underline = ${colors.modfg}
 ;format-background = ${colors.bg}
-;format-foreground = ${colors.fg}
+format-foreground = ${colors.blue}
 ;format-padding = 2
 
 
@@ -339,6 +340,7 @@ format-padding = 1
 ;format-margin = 1
 
 ;format-background = ${colors.black}
+format-foreground = ${colors.red}
 
 menu-0-0 = " shutdown "
 menu-0-0-exec = shutdown now
