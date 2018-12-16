@@ -23,11 +23,11 @@ rofi.modi:                           window,run,ssh,combi
 ! "Whether to load and show icons" Set from: Default
 ! rofi.show-icons:                     false
 ! "Terminal to use" Set from: Default
- rofi.terminal:                       gnome-terminal
+ rofi.terminal:                       termite
 ! "Ssh client to use" Set from: Default
 rofi.ssh-client:                     mosh
 ! "Ssh command to execute" Set from: Default
-rofi.ssh-command:                    {terminal} --  {ssh-client} {host}
+rofi.ssh-command:                    {terminal} -e "{ssh-client} {host}"
 ! "Run command to execute" Set from: Default
 ! rofi.run-command:                    {cmd}
 ! "Command to get extra run targets" Set from: Default
