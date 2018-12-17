@@ -1,5 +1,5 @@
 [global]
-    font                 = Iosevka 25
+    font                 = Iosevka 15
     markup               = full
     format               = "<b>%s</b>\n%b"
     monitor              = 0
