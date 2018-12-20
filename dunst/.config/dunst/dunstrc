@@ -12,7 +12,6 @@
     separator_height     = 4
     padding              = 16
     horizontal_padding   = 16
-    frame_width          = 0
     separator_color      = auto
     idle_threshold       = 120
     show_age_threshold   = 60
@@ -27,10 +26,11 @@
     title                = Dunst
     class                = Dunst
     browser              = /usr/bin/chromium -new-tab
-    startup_notification = true
+    startup_notification = false
     always_run_script    = true
     icon_position        = left
-
+    frame_color = "#000000"
+    frame_width = 1
 [shortcuts]
     close = ctrl+space
     close_all = ctrl+shift+space
@@ -43,8 +43,8 @@
     timeout = 4
 
 [urgency_normal]
-    background = "#121c21"
-    foreground = "#aaafb2"
+    background = "#ffffff"
+    foreground = "#000000"
     timeout = 6
 
 [urgency_critical]
