@@ -27,6 +27,5 @@
 
 
 (map! :leader
-      (:prefix "o"
-        (:nve "I" #'=irc)))
-
+      :prefix "o"
+      "I" #'=irc)

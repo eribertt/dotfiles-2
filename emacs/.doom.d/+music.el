@@ -16,8 +16,7 @@
     (:leader
         (:desc "applications" :prefix "a"
             (:desc "music" :prefix "m"
-                :desc "Play/Pause Music" :n "m" #'google-play-music-play-pause
-                :desc "Rewind song" :n "u" #'google-play-music-unwind
-                :desc "Skip song" :n "f" #'google-play-music-forward
-                :desc "Connect to music player" :n "c" #'google-play-music-start))))
-
+                :desc "Play/Pause Music" "m" #'google-play-music-play-pause
+                :desc "Rewind song" "u" #'google-play-music-unwind
+                :desc "Skip song" "f" #'google-play-music-forward
+                :desc "Connect to music player" "c" #'google-play-music-start))))

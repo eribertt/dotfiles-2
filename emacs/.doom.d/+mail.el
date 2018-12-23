@@ -20,7 +20,7 @@
   (map!
    (:leader
      (:prefix "o"
-       (:desc "APP: Email" :nmv "e" #'=mail))))
+       (:desc "APP: Email" "e" #'=mail))))
   :config
   (setq notmuch-fcc-dirs nil
         notmuch-show-logo nil
@@ -144,10 +144,10 @@
             :nmv "x"   #'+mail/notmuch-tree-spam)
           (:map notmuch-message-mode-map
             :localleader
-            :desc "Send and Exit"       :n doom-localleader-key #'notmuch-mua-send-and-exit
-            :desc "Kill Message Buffer" :n "k" #'notmuch-mua-kill-buffer
-            :desc "Save as Draft"       :n "s" #'message-dont-send
-            :desc "Attach file"         :n "f" #'mml-attach-file))))
+            :desc "Send and Exit"       doom-localleader-key #'notmuch-mua-send-and-exit
+            :desc "Kill Message Buffer" "k" #'notmuch-mua-kill-buffer
+            :desc "Save as Draft"       "s" #'message-dont-send
+            :desc "Attach file"         "f" #'mml-attach-file))))
 
 ;;;; counsel-notmuch
 (when (featurep! :completion ivy)

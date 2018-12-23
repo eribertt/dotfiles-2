@@ -7,12 +7,12 @@
 (after! org
   (map! :map evil-org-mode-map
         :localleader
-        :desc "Create/Edit Todo" :nve "o" #'org-todo
-        :desc "Schedule" :nve "s" #'org-schedule
-        :desc "Deadline" :nve "d" #'org-deadline
-        :desc "Refile" :nve "r" #'org-refile
-        :desc "Filter" :nve "f" #'org-match-sparse-tree
-        :desc "Tag heading" :nve "t" #'org-set-tags-command)
+        :desc "Create/Edit Todo" "o" #'org-todo
+        :desc "Schedule" "s" #'org-schedule
+        :desc "Deadline" "d" #'org-deadline
+        :desc "Refile" "r" #'org-refile
+        :desc "Filter" "f" #'org-match-sparse-tree
+        :desc "Tag heading" "t" #'org-set-tags-command)
   ;; The standard unicode characters are usually misaligned depending on the font.
   ;; This bugs me. Personally, markdown #-marks for headlines are more elegant.
   (setq org-bullets-bullet-list '("#"))
@@ -33,8 +33,8 @@
   (find-file +todo-file))
 
 (map!
- (:leader
-   :desc "Open todo file" :nvm "O" #'+open-todo-file))
+ :leader
+   :desc "Open todo file" "O" #'+open-todo-file)
 
 (defun +show-agenda ()
   (interactive)
@@ -50,10 +50,10 @@
 
 (map! :leader
       (:prefix "o"
-        :desc "Org Agenda" :nvm "a" #'org-agenda-list
-        :desc "Org Agenda and Notes" :nvm "A" #'+show-agenda)
+        :desc "Org Agenda" "a" #'org-agenda-list
+        :desc "Org Agenda and Notes" "A" #'+show-agenda)
       (:when (featurep! :completion helm)
-        :nv "X" #'helm-org-capture-templates))
+        "X" #'helm-org-capture-templates))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Daypage stuff
@@ -77,5 +77,5 @@
 
 (map! :leader
       :prefix "n"
-      :nv "o" #'todays-daypage
-      :nv "O" #'find-daypage)
+      "o" #'todays-daypage
+      "O" #'find-daypage)

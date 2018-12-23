@@ -37,10 +37,10 @@
   :config
   (map! :map enh-ruby-mode-map
         :localleader ;; while these may look weird, they're what I used in spacemacs and are muscle memory
-        :nv "rrf" #'rubocop-check-current-file
-        :nv "rrF" #'rubocop-autocorrect-current-file
-        :nv "rrp" #'rubocop-check-project
-        :nv "rrP" #'rubocop-autocorrect-project))
+        "rrf" #'rubocop-check-current-file
+        "rrF" #'rubocop-autocorrect-current-file
+        "rrp" #'rubocop-check-project
+        "rrP" #'rubocop-autocorrect-project))
 
 ;;
 (after! smartparens-ruby
