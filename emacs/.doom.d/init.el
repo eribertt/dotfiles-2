@@ -89,7 +89,7 @@
        ledger
        lua
        markdown
-       ;; nix
+       nix
        ocaml
        (org
         +attach

@@ -66,6 +66,10 @@
   (setq elm-tags-on-save t
         elm-sort-imports-on-save t))
 
+(map! :leader
+     :prefix "f"
+     "n" (lambda! (doom/sudo-find-file "/etc/nixos/configuration.nix")))
+
 (after! helm
   ;; I want backspace to go up a level, like ivy
   (add-hook! 'helm-find-files-after-init-hook
