@@ -10,8 +10,6 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-export TERMINAL="xterm"
-
 export NVM_DIR=$HOME/.nvm
 source ~/.zprezto/runcoms/lazy-load.sh
 lazyload nvm ~/.nvm/versions/node /usr/share/nvm/nvm.sh
